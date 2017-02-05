@@ -17,7 +17,7 @@
   						.selectAll("p")
   						.data(res)
   						.enter().append("p")
-  						.style("width", function(d){ return (d.sales * .015) + 'px';})
+  						.style("width", function(d){ return ((d.sales * .015) + 20) + 'px';})
   						.text(function(d){
   							return d.month;
   						});
