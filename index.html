@@ -20,6 +20,9 @@
   						.style("width", function(d){ return d.sales + 'px';})
   						.text(function(d){
   							return d.month;
+  						})
+  						.onmouseover(function(d){
+  							$("#salesInfo").html("Raw Sales Numbers:" + d.sales);
   						});
   				});
   			});
@@ -41,6 +44,6 @@
 		<h1>Web Dashboard</h1>
 
 		<div id="canvas"></div>
-
+		<p id="salesInfo"></div>
 	</body>
 </html>
