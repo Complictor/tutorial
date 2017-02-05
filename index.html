@@ -15,6 +15,7 @@
   					canvasDiv.html("");
   					d3.select("#canvas")
   						.selectAll("p")
+  						.data(res)
   						.enter().append("p")
   						.style("height", function(d){ return (d.sales * 20) + 'px';})
   						.text(function(d){
