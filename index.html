@@ -22,12 +22,16 @@
   							return d.month;
   						})
   						.on("mouseover", function(d){
-  							d3.select(this).style("background-color", "yellow");
+  							d3.select(this)
+  							.style("background-color", "yellow");
+  							.style("color", "black");
   							$("#salesInfo").html("Raw Sales Numbers:" + d.sales);
   						})
   						.on("mouseout", function(d){
-  							d3.select(this).style("background-color", "steelblue");
-  							$("#salesInfo").html("Hover over a particular month to see Raw Sales Numbers");
+  							d3.select(this)
+  							.style("background-color", "steelblue");
+  							.style("color", "white");
+  							$("#salesInfo").html("");
   						});
   				});
   			});
