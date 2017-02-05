@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>Complictor Sample Dashboard</title>
+		<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  		<script src="https://d3js.org/d3.v4.min.js"></script>
+  		<script>
+  			$(function(){
+  				var canvasDiv = $("#canvas");
+  				canvasDiv.html("Loading...");
+
+  				$.get("https://api.complictor.com/jumper152/getdata", function(res){
+  					canvasDiv.html("");
+  					d3.select("#canvas")
+  						.selectAll("p")
+  						.enter().append("p")
+  						.style("height", function(d){ return (d.sales * 20) + 'px';});
+  						.text(function(d){
+  							return d.month;
+  						});
+  				});
+  			});
+
+  		</script>
+  		<style>
+  			#canvas p{
+  				width:20px;
+  				color:blue;
+  				display:inline-block;
+  			}
+
+  		</style>
+	</head>
+	<body>
+		<h1>Web Dashboard</h1>
+
+		<div id="canvas"></div>
+
+	</body>
+</html>
