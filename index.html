@@ -21,7 +21,7 @@
   						.text(function(d){
   							return d.month;
   						})
-  						.onmouseover(function(d){
+  						.on("mouseover", function(d){
   							$("#salesInfo").html("Raw Sales Numbers:" + d.sales);
   						});
   				});
