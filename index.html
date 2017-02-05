@@ -16,7 +16,7 @@
   					d3.select("#canvas")
   						.selectAll("p")
   						.enter().append("p")
-  						.style("height", function(d){ return (d.sales * 20) + 'px';});
+  						.style("height", function(d){ return (d.sales * 20) + 'px';})
   						.text(function(d){
   							return d.month;
   						});
